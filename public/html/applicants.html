@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html ng-app="JobApp">
+
+  <head>
+
+    <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+       <script src="../javascripts/main.js"></script>
+
+  </head>
+
+  <body ng-controller="applicantController">
+
+    <h1>Success! We'll be in contact shortly!</h1>
+    <br>
+    <a href="http://localhost:3000/" type=button>Back</a>
+    <br>
+    <div class="container">
+      <h1>Applicants</h1>
+      <ul ng-repeat="applicant in applicants" id="applications" class="list-unstyled">
+        <li><strong>Name: </strong> {{applicant.name}}</li>
+        <li><strong>Bio: </strong>{{applicant.bio}}</li>
+        <li><strong>Skills: </strong> {{applicant.skills}}</li>
+        <li><strong>Experience: </strong> {{applicant.exp}}</li>
+        <li><strong>Why: </strong>{{applicant.why}}</li>
+      </ul>
+    </div>
+
+  </body>
+
+</html>
